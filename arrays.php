@@ -17,8 +17,8 @@ echo "</pre><br>";
 <h3><center>Associative Arrays</center></h3>
 <?php
 $assoc_array = array (
-        "first_name" => "Paula",
-        "last_name" => "Davidel"
+    "first_name" => "Paula",
+    "last_name" => "Davidel"
 );
 echo "Fist Name: ".$assoc_array["first_name"]."<br>Last Name: ".$assoc_array["last_name"]."<br>";
 echo "First Customer: ".$assoc_array["first_name"]." ".$assoc_array["last_name"]."<br><br>";
@@ -38,14 +38,24 @@ echo "</pre>";
 <?php
 echo "Associative Array, where the key is a integer: <br>";
 $numbers = array(
-        0 => 2,
-        1 => 8,
-        2 => 15,
-        3 => 16,
-        4 => 23,
-        5 => 42
+    0 => 2,
+    1 => 8,
+    2 => 15,
+    3 => 16,
+    4 => 23,
+    5 => 42
 ); //associative array
 echo "<pre>";
 print_r($numbers);
 echo "</pre>";
+?>
+<br>
+<h3><center>Array Functions</center></h3>
+
+<br>
+<?php
+
+echo "The number of array items: ".count($numbers)."<br>";
+echo "The maxim item: ".max($numbers)."<br>";
+echo "The minim item: ".min($numbers)."<br>";
 ?>
