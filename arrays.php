@@ -3,14 +3,17 @@
 <?php
 
 $numbers = array(2,8,15,16,23,42);
-echo "Get first element from array: ".$numbers[0];
+print_r($numbers);
+echo "<br>Get the first item from array: ".$numbers[0]."<br>";
 ?>
 <br>
 <?php
 $mixed = array(6,"fox","dog",array("x","y","z"));
-echo $mixed[2]."<br><pre>";
+echo "<pre>";
 print_r($mixed);
-echo "</pre><br>";
+echo "</pre>";
+echo "<br>Get the second item from array: ".$mixed[2]."<br>";
+echo "<br>";
 ?>
 
 <br>
