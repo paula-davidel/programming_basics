@@ -2,7 +2,7 @@
 <br>
 <?php
 
-$numbers = array(2,8,15,16,23,42);
+$numbers = array(2,8,15,9,23,42);
 print_r($numbers);
 echo "<br>Get the first item from array: ".$numbers[0]."<br>";
 ?>
@@ -32,7 +32,7 @@ echo "Second Customer: ".$assoc_array["first_name"]." ".$assoc_array["last_name"
 <br><h3><center>Example :</center></h3>
 Array: <br>
 <?php
-$numbers = array(2,8,15,16,23,42);//array
+//array $numbers = array(2,8,15,16,23,42);
 echo "<pre>";
 print_r($numbers);
 echo "</pre>";
@@ -40,14 +40,17 @@ echo "</pre>";
 <br><br>
 <?php
 echo "Associative Array, where the key is an integer: <br>";
+
+/*  associative array
 $numbers = array(
     0 => 2,
     1 => 8,
     2 => 15,
-    3 => 16,
+    3 => 9,
     4 => 23,
     5 => 42
-); //associative array
+);
+*/
 echo "<pre>";
 print_r($numbers);
 echo "</pre>";
@@ -62,3 +65,18 @@ echo "The number of array items: ".count($numbers)."<br>";
 echo "The maxim item: ".max($numbers)."<br>";
 echo "The minim item: ".min($numbers)."<br>";
 ?>
+
+<h3><center>Sort</center></h3>
+<br>
+The array:
+<pre>
+     <?php echo print_r($numbers);?>
+ </pre><br>
+Sort (ASC):
+<pre>
+    <?php sort($numbers); print_r($numbers);?>
+</pre><br>
+Reverse sort (DESC):
+<pre>
+        <?php rsort($numbers); print_r($numbers);?>
+    <pre><br>
