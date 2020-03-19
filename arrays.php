@@ -131,3 +131,24 @@ Reverse sort (DESC):
        else
            echo "false";
        ?>
+<h3><center>PUSH/POP</center></h3>
+        <br>
+        <?php
+        //array_push — Push one or more elements onto the end of array
+        echo "Add 2 elements into the end of array: ";
+        array_push($numbers,123,"string");
+        print_r($numbers);
+        // array_pop — Pop the element off the end of array
+        echo "<br>Remove the last element off the end of array: ";
+        array_pop($numbers);
+        print_r($numbers);
+        //array_shift — Shift an element off the beginning of array
+        echo "<br>Remove the first element into the beginning of array: ";
+        array_shift($numbers);
+        print_r($numbers);
+        //array_unshift — Prepend one or more elements to the beginning of an array
+        echo "<br>Add two elements in front of array: ";
+        array_unshift($numbers,12343,"test");
+        print_r($numbers);
+        ?>
+        <br>
