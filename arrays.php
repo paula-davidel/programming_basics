@@ -39,7 +39,7 @@ echo "</pre>";
 ?>
 <br><br>
 <?php
-echo "Associative Array, where the key is a integer: <br>";
+echo "Associative Array, where the key is an integer: <br>";
 $numbers = array(
     0 => 2,
     1 => 8,
