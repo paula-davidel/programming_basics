@@ -70,6 +70,52 @@ Even numbers: <?php print_r($even);?>
 <br>
 Odd numbers: <?php print_r($odd);?>
 <br>
+<br> <b> Using function "continue" </b><br>
+Even numbers:
+<?php
+for($count=0;$count<=30;$count++)
+{
+    if($count % 2 == 0)
+    {
+        echo $count." , ";
+    }
+    else
+    {
+        continue;
+    }
+}
+?>
+<br>
+
+Odd numbers:
+<?php
+for($count=0;$count<=30;$count++)
+{
+    if($count % 2 == 0)
+    {
+        continue;
+    }
+    else
+    {
+        echo $count." , ";
+    }
+}
+?>
+<br><?php
+while($count<=30)
+{
+    switch ($count % 2) {
+        case 0:
+            $even[] =$count." ";
+            break;
+        case 1:
+            $odd[] = $count." ";
+            break;
+    }
+    $count++;
+}
+?>
+<br>
 <h3><center>Loop: foreach</center></h3>
 <br>
 <?php // foreach using assoc. array
