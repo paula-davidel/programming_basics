@@ -19,7 +19,7 @@ class Bicycle
         return $conversion_into_lbs;
     }
 
-    public function set_weight_lbs($lbs)
+    function set_weight_lbs($lbs)
     {
         $weight_kg = floatval($lbs) / 2.2046226218;
         return $weight_kg;
