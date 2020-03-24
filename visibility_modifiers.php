@@ -15,7 +15,7 @@ class User
     public $first_name;
     public $last_name;
     protected $registration_id;
-    private $tuition = 0.00;
+    private $tuition = 500.00;
 
     private function has_admin_access()
     {
@@ -46,6 +46,11 @@ class User
     {
         return "<h3><center> Welcome ".$this->first_name." ".$this->last_name." ! </center></h3> ";
     }
+
+    public function tuition_format()
+    {
+        return "$ {$this->tuition}";
+    }
 }
 
 class PartTime extends User
@@ -71,3 +76,4 @@ echo "{$user->full_name()} <center> ( {$user->access_level()} ) </center>.<br/>"
 //echo "{$user->tuition} <br/>";
 
 echo "{$parttime->hello_parent()} <br/>";
+echo "The new website will you cost {$parttime->tuition_format()}<br/>";
