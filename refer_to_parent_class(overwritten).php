@@ -30,3 +30,8 @@ echo Image::geometry()."<br/>";
 echo "The values for the subclass: ";
 echo ProfileImage::geometry()."<br/>";
 echo "We could observe that as default values inherited from the parent class are overwritten.";
+
+echo "<br/><br/>If we reset the value for the property 'resizing_enabled' in subclass.<br/>";
+ProfileImage::$resizing_enabled = false;
+echo "<br/>And the result is: ";
+echo ProfileImage::geometry();
