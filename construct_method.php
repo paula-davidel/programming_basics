@@ -14,13 +14,25 @@ class Product
 {
     public $name;
     public $color;
+    public $price;
+//    public function __construct($name,$color)
+//    {
+//        echo "Creating new product<br/>";
+//        $this->name = $name;
+//        $this->color = $color;
+//    }
 
-    public function __construct()
+    //If we have more arguments , we use this syntax
+    public function __construct($args=[])
     {
         echo "Creating new product<br/>";
-        $this->color = "blue";
+        $this->name = $args['name'] ?? NULL;
+        $this->color = $args['color'] ?? NULL;
+        $this->price = $args['price'] ?? NULL;
     }
 }
 
-$shirt = new Product();
-echo $shirt->color;
+//$shirt = new Product("T-shirt","red");
+
+$shirt = new Product(["name"=>"T-shirt","color"=>"red","price"=>10.00]);
+echo "<pre>";print_r($shirt);echo "</pre>";
