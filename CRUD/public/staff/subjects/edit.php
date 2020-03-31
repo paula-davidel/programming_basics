@@ -39,9 +39,13 @@ if(is_post_request())
     );
 
     $result = update_subject($new_values);
-    if($result)
+    if($result == 1)
     {
         redirect_to(url_for("/staff/subjects/show.php?id=".$id));
+    }
+    else
+    {
+        $errors=$result;
     }
 }
 else
@@ -51,10 +55,11 @@ else
     $menu_name = $subject['menu_name'];
     $position = $subject['position'];
     $visible = $subject['visible'];
-
-    $subject_set = find_all_subjects();
-    $subject_count = mysqli_num_rows($subject_set);
 }
+
+$subject_set = find_all_subjects();
+$subject_count = mysqli_num_rows($subject_set);
+
 ?>
 
 <?php
@@ -68,6 +73,7 @@ include(SHARED_PATH."/staff_header.php");
             <h1><?php echo $page_title;?></h1>
         </div>
 
+        <?php echo display_errors($errors);?>
         <form action="<?php echo url_for("/staff/subjects/edit.php?id=".$id);?>" method="post">
             <dl>
                 <dt>

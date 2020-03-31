@@ -26,14 +26,17 @@ if(is_post_request())
     );
 
     $result = update_page($update_page);
-    redirect_to(url_for("/staff/pages/show.php?id=".$id));
+    if($result ==  1)
+    {
+        redirect_to(url_for("/staff/pages/show.php?id=".$id));
+    }
+    else
+    {
+        $errors = $result;
+    }
 }
 else
 {
-    $subjects = find_all_subjects();
-    $pages = find_all_pages();
-    $pages_count = mysqli_num_rows($pages);
-
     $page=find_page_by_id($id);
     $subject_id=$page["subject_id"];
     $menu_name=$page["menu_name"];
@@ -41,7 +44,12 @@ else
     $visible = $page["visible"];
     $content = $page["content"];
 }
+
+$subjects = find_all_subjects();
+$pages = find_all_pages();
+$pages_count = mysqli_num_rows($pages);
 ?>
+
 
 <?php
 $page_title = 'Edit Page';
@@ -54,6 +62,7 @@ include(SHARED_PATH."/staff_header.php");
             <h1><?php echo $page_title;?></h1>
         </div>
 
+        <?php echo display_errors($errors);?>
         <form action="<?php echo url_for("/staff/pages/edit.php?id=".$id);?>" method="post">
             <dl>
                 <dt>

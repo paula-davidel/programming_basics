@@ -18,19 +18,36 @@ if(is_post_request())
     $position = isset($_POST['position']) ? $_POST["position"] : "1";
     $visible = isset($_POST['visible']) ? $_POST["visible"] : 0;
     $content = isset($_POST["content"]) ? $_POST["content"] : "";
-}
-else
-{
-    $subject_id=0;
-    $menu_name="";
-    $position = 1;
-    $visible =0;
-    $content = "";
+//    echo "<h3><center>After we created a new page</center></h3>";
+//
+//    echo "Form parameters: <br/>";
+//    echo "Menu name: {$menu_name}<br/>";
+//    echo "Position: {$position}<br/>";
+//    echo "Visible: {$visible}<br/>";
+    $insert_page = array(
+        "subject_id" => $subject_id,
+        "menu_name" => $menu_name,
+        "position"  => $position,
+        "visible"   => $visible,
+        "content"   => $content
+    );
 
-    $subjects = find_all_subjects();
-    $pages = find_all_pages();
-    $pages_count = mysqli_num_rows($pages)+1;
+    $result = insert_page($insert_page);
+    if($result === true)
+    {
+        //redirect to show page, so we need to see the id that inserted by  sql
+        $new_id = mysqli_insert_id($db);
+        redirect_to(url_for("/staff/pages/show.php?id=".$new_id));
+    }
+    else
+    {
+        $errors=$result;
+    }
 }
+
+$subjects = find_all_subjects();
+$pages = find_all_pages();
+$pages_count = mysqli_num_rows($pages)+1;
 
 $page_title = 'Create Page';
 include(SHARED_PATH."/staff_header.php");
@@ -42,7 +59,8 @@ include(SHARED_PATH."/staff_header.php");
             <h1><?php echo $page_title;?></h1>
         </div>
 
-        <form action="<?php echo url_for("/staff/pages/create.php");?>" method="post">
+        <?php echo display_errors($errors);?>
+        <form action="<?php echo url_for("/staff/pages/new.php");?>" method="post">
             <dl>
                 <dt>
                     Subject
