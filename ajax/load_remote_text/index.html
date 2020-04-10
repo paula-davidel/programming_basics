@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>Ajax Text</title>
+  </head>
+  <body>
+
+    <div id="main">
+      This is the original text when the page first loads.
+    </div>
+    <br/><br/>
+    <button id="ajax-button" type="button">Update content with Ajax</button>
+
+    <script>
+      function replaceText()
+      {
+          var xhr = new XMLHttpRequest();
+          var target = document.getElementById("main");
+          xhr.open("GET","new_content.txt",true);
+
+          xhr.onreadystatechange = function () {
+            console.log("readyState: " + xhr.readyState);
+              if(xhr.readyState == 2)
+              {
+                  target.innerHTML = "LOADING ...";
+              }
+              if(xhr.readyState == 4 && xhr.status == 200)
+              {
+                  target.innerHTML = xhr.responseText;
+              }
+          }
+          xhr.send();
+      }
+
+      var button = document.getElementById ("ajax-button");
+      button.addEventListener("click", replaceText);
+    </script>
+
+  </body>
+</html>
