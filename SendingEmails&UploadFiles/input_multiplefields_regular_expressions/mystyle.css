@@ -1,0 +1,126 @@
+form * {
+	background: none;
+}
+
+.group:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+input,input[type=file],input[type=date],input[type=text],input[type=password],input[type=submit],input[type=email],input[type=url],input[type=number],input[type=datetime],textarea,button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: none;
+	background: transparent;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	padding: 5px;
+	margin: 0;
+	margin-bottom: 10px;
+	color: #555;
+}
+
+body {
+	background: #42826C;
+	background-image: -webkit-gradient(linear, left top, left bottom, );
+	background: #42826C -webkit-linear-gradient(#002F32,#42826C) no-repeat;
+	background: #42826C -moz-linear-gradient(#002F32,#42826C) no-repeat;
+	background: #42826C -o-linear-gradient(#002F32,#42826C) no-repeat;
+	background: #42826C -ms-linear-gradient(#002F32,#42826C) no-repeat;
+	background: #42826C linear-gradient(#002F32,#42826C) no-repeat;
+	height: 500px;
+}
+
+form {
+	width: 450px;
+	margin: 0 auto;
+	position: relative;
+	top: 50px;
+
+	background: rgb(165, 199, 127);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5%, linear-gradient(rgb(249, 195, 95)), to(rgb(165, 199, 127) ) no-repeat));
+	background: url(checkeredpattern.png) repeat-x, -webkit-linear-gradient(rgb(249, 195, 95) 5%, rgb(165, 199, 127) ) no-repeat;
+	background: url(checkeredpattern.png) repeat-x, -moz-linear-gradient(rgb(249, 195, 95) 5%, rgb(165, 199, 127) ) no-repeat;
+	background: url(checkeredpattern.png) repeat-x, -o-linear-gradient(rgb(249, 195, 95) 5%, rgb(165, 199, 127) ) no-repeat;
+	background: url(checkeredpattern.png) repeat-x, -ms-linear-gradient(rgb(249, 195, 95) 5%, rgb(165, 199, 127) ) no-repeat;
+	background: url(checkeredpattern.png) repeat-x, linear-gradient(rgb(249, 195, 95) 5%, rgb(165, 199, 127) ) no-repeat;
+	border: 5px solid rgba(2, 46, 50,1);
+	padding: 35px 30px 5px 30px;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-box-shadow: inset 0px 1px 1px rgba(255,255,255,1), 0px 10px 15px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 0px 1px 1px rgba(255,255,255,1), 0px 10px 15px rgba(0,0,0,.5);
+	box-shadow: inset 0px 1px 1px rgba(255,255,255,1), 0px 10px 15px rgba(0,0,0,.5);
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
+
+input,input[type=file],input[type=date],input[type=text],input[type=password],input[type=submit],input[type=email],input[type=url],input[type=number],input[type=datetime],textarea {
+	border: 1px solid rgb(71, 129, 106);
+	background: white;
+	width: 100%;
+}
+
+textarea {
+	height: 150px;
+}
+
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol li ol li {
+	display: inline;
+}
+
+ol li label,ol li .grouplabel {
+	font: bold 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+	padding: 5px;
+	color: #315848;
+	display: block;
+	text-shadow: 0 1px 0px #FFF;
+}
+
+ol li ol li label {
+	padding: 0;
+	display: inline;
+	float: none;
+	font-weight: normal;
+}
+
+ol li ol {
+	padding: 5px;
+	float: left;
+	margin-left: 5px;
+}
+
+button {
+	color: #FFC861;
+	padding: 5px 10px;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	float: right;
+	background: rgb(2, 46, 50);
+	/*background-image: -webkit-gradient(linear, left top, left bottom, from(106)), to(rgb(2, 46, 50) ) no-repeat));*/
+	background: -webkit-linear-gradient(rgb(71, 129, 106), rgb(2, 46, 50) ) no-repeat;
+	background: -moz-linear-gradient(rgb(71, 129, 106), rgb(2, 46, 50) ) no-repeat;
+	background: -o-linear-gradient(rgb(71, 129, 106), rgb(2, 46, 50) ) no-repeat;
+	background: -ms-linear-gradient(rgb(71, 129, 106), rgb(2, 46, 50) ) no-repeat;
+	background: linear-gradient(rgb(71, 129, 106), rgb(2, 46, 50) ) no-repeat;
+}
+
+
+input[required] {
+	border: 1px solid #ac0101;
+}

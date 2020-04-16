@@ -1,0 +1,112 @@
+		form * {
+			background: none;
+		}
+		
+		input[type=text], input[type=password], input[type=submit],textarea, button {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			border: none;
+			background: white;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 5px;
+			padding: 5px;
+			margin: 0;
+			margin-bottom: 10px;
+			color: #555;
+		}
+						
+		body {
+			background: url(background_wood.jpg);
+		}
+		
+		form {
+			width: 340px;
+			margin: 0 auto;
+			position: relative;
+			top: 150px;
+			
+			background: #7A1631;
+			background-image: -webkit-gradient(linear, left top, left bottom, );
+			background: #7A1631 -webkit-linear-gradient(#7A1631,#3F0B1B);
+			background: #7A1631 -moz-linear-gradient(#7A1631,#3F0B1B);
+			background: #7A1631 -o-linear-gradient(#7A1631,#3F0B1B);
+			background: #7A1631 -ms-linear-gradient(#7A1631,#3F0B1B);
+			background: #7A1631 linear-gradient(#7A1631,#3F0B1B);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a1631', endColorstr='#3f0b1b',GradientType=0 );
+			border: 1px solid #3f0b1b;
+		
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+		
+			-webkit-box-shadow: 5px 5px 11px rgba(0,0,0,0.42);
+			-moz-box-shadow: 5px 5px 11px rgba(0,0,0,0.42);
+			box-shadow: 5px 5px 11px rgba(0,0,0,0.42);
+			padding: 15px 30px 10px 30px;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 27px;
+			color: #CF423C;
+			margin: 0px;
+			margin-bottom: 3px;
+		}
+		
+		p {
+			font-size: 13px;
+			text-align: center;
+			color: #FFF;
+			margin: 0;
+			margin-bottom: 20px;
+		}
+		
+		.group:after {
+			content: " ";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		label {
+			float: left;
+			text-align: right;
+			font-size: 13px;
+			color: #FC7D49;
+			padding: 5px;
+			clear: both;
+		}
+		
+		input[type=text],input[type=password] {
+			float: right;
+			width: 250px;
+			border: 1px solid #3F0B1B;
+		}
+		
+		input[type=text]:focus,input[type=password]:focus {
+			background: #DDD;
+		}
+				
+		button {
+			font-size: 13px;
+			width: 90px;
+			text-align: center;
+			display: block;
+			float: right;
+			clear: both;
+			background: #FFD462;
+			padding: 6px 28px;
+			border: none;
+		
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px;
+			color: #7A1631;
+		}
+		
+		button:hover {
+			background: #CF423C;
+			color: #FFD462;
+		}
